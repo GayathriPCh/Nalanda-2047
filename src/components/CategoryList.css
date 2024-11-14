@@ -1,0 +1,64 @@
+/* Category List Section - Fullscreen */
+.category-list {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background: linear-gradient(135deg, #1e3b3a, #0a2224); /* Same dark gradient background */
+    color: #fff;
+    text-align: center;
+}
+
+/* Title Styling */
+.category-list h2 {
+    font-family: 'TheGanesha', sans-serif; /* Same font as other sections */
+    font-size: 5rem; /* Large title for emphasis */
+    margin-bottom: 2rem;
+    color: #d5ff06; /* Vibrant yellow-green for spiritual energy */
+    text-shadow: 0px 4px 12px rgba(255, 255, 255, 0.7); /* Subtle glow effect */
+}
+
+/* List Styling */
+.category-list ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+/* Individual Category Item Styling */
+.category-list li {
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background for each item */
+    margin: 1.5rem auto; /* More space between items */
+    padding: 1.5rem;
+    border-radius: 12px; /* Rounded corners for sleek look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    position: relative;
+    width: 300px; /* Fixed width for category items to keep them uniform */
+}
+
+/* Hover Effects on Category Items */
+.category-list li:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
+}
+
+/* Link Styling (Category Names) */
+.category-list a {
+    text-decoration: none; /* Remove underline by default */
+    color: #d5ff06; /* Bright yellow-green to match the theme */
+    font-family: 'TheGanesha', sans-serif;
+    font-size: 1.8rem; /* Slightly larger font size for emphasis */
+}
+
+/* Link Hover Effect (Underline) */
+.category-list a:hover {
+    text-decoration: underline; /* Underline on hover to indicate interactivity */
+}
+
+/* Description Text Styling (Optional) */
+.category-list p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #f5f5f5; /* Light grey for readability against dark background */
+}

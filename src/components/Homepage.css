@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'theganesha';
+    src: url('./Theganesha-V5OB.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fullscreen layout for each section */
+.section {
+    position: relative; /* Required for background video layering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: #fff;
+    scroll-snap-align: start;
+    overflow: hidden; /* Prevents scroll bars from appearing */
+}
+
+
+/* Scroll snapping for full-page scrolling */
+body, html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+
+
+
+.main-title {
+    font-family: 'TheGanesha', sans-serif;
+    font-size: 12rem;
+    color: #d5ff06;
+    text-shadow: 0px 4px 12px rgb(251, 251, 251);
+    transition: transform 0.3s ease;
+}
+
+.main-subtitle {
+    font-family: 'TheGanesha', sans-serif;
+    font-size: 2.5rem;
+    color: #000000;
+    background-color: #d5ff06;
+    margin-top: 0.5em;
+    opacity: 0.9;
+}
+
+/* About Section */
+.about-section {
+    padding: 0 2rem;
+}
+
+.about-title {
+    font-size: 5rem;
+    font-family: 'TheGanesha', sans-serif;
+    color: #000; /* Black text */
+    background-color: #f8e71c; /* Yellow highlight */
+    padding: 0.2em 0.4em; /* Space around the text */
+    border-radius: 4px; /* Optional: Rounded corners */
+    margin-bottom: 1rem;
+    display: inline-block; /* To wrap the background only around the text */
+}
+
+.about-description {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    color: #000; /* Black text */
+    background-color: #f8e71c; /* Yellow highlight */
+    padding: 0.2em 0.4em; /* Space around the text */
+    border-radius: 4px; /* Optional: Rounded corners */
+    max-width: 800px;
+    display: inline-block; /* Wrap background only around the text */
+}
+/* Teachings Section */
+/* Teachings Section */
+.teachings-section {
+    position: relative; /* Ensure layering for background video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Fullscreen section */
+    width: 100vw;
+    color: #fff;
+    padding: 4rem 2rem;
+}
+
+.teachings-title {
+    font-size: 4rem;  /* Larger font size for emphasis */
+    font-family: 'TheGanesha', sans-serif;  /* Same font as other sections */
+    color: #d5ff06;  /* Bright yellow-green for spiritual energy */
+    text-shadow: 0px 4px 12px rgba(255, 255, 255, 0.5);  /* Soft glow effect */
+    margin-bottom: 2rem;
+}
+
+/* Teachings Cards Container */
+.teachings-cards {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);  /* Two cards per row */
+    gap: 2rem;  /* Space between cards */
+    width: 100%;
+    max-width: 1200px;  /* Limit maximum width for better readability */
+    margin-top: 2rem;
+}
+
+/* Individual Teaching Card Styling */
+.teaching-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for sleek look */
+    color: #ffffff;
+
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 350px; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.teaching-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+}
+
+/* Card Background Images with Overlay Effect */
+.teaching-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Dimmed background image for mystical feel */
+}
+
+.teaching-bhagavad::before {
+    background-image: url('https://t4.ftcdn.net/jpg/06/87/01/99/360_F_687019962_K5KCKXhRBMc3sxUvJ5tn8jL0Lc1fQOjw.jpg'); /* Bhagavad Gita image */
+}
+
+.teaching-ayigiri::before {
+    background-image: url('https://i.pinimg.com/736x/5f/5f/f5/5f5ff50d5e8303e77fa182c6599cf2cd.jpg'); /* Ayigiri Nandini image */
+}
+.teaching-tandava::before {
+    background-image: url('https://img.freepik.com/premium-vector/lord-shiv-tandav-artistic-vector-design_620614-388.jpg'); /* Ayigiri Nandini image */
+}
+.teaching-chalisa::before {
+    background-image: url('https://t3.ftcdn.net/jpg/07/75/55/90/360_F_775559000_WHSNWoYscIDsEJ9UY5HTQt0owRElYNem.jpg'); /* Ayigiri Nandini image */
+}
+/* Card Text Styling */
+.teaching-card h2 {
+    font-size: 4rem;  
+    color: rgb(255, 255, 255);
+    font-family: 'TheGanesha', sans-serif;  
+    z-index: 1; /* Ensure text is above the image overlay */
+}
+
+.teaching-card p {
+    font-size: 1.6rem;  
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 1; /* Ensure text is above the image overlay */
+}
+
+/* Button Style for Links (Optional) */
+.teaching-card a {
+    margin-top: auto;
+    padding: .8rem 2rem;
+    background-color: #d5ff06; 
+    color: #000;
+    border-radius: .4rem;
+}
+
+/* Additional cards as needed */
+/* Background Video Styling */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Adjustments for Fullscreen Sections */
+.section {
+    position: relative; /* Required for background video layering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: #fff;
+    scroll-snap-align: start;
+    overflow: hidden; /* Prevents scroll bars from appearing */
+}
